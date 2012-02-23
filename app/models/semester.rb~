@@ -1,0 +1,15 @@
+class Semester < ActiveRecord::Base
+has_many :groups
+
+validates :year, :presence => true
+validates :wcount, :presence => true
+
+  def sex
+    semnum? ? 'осенний семестр' : 'весенний семестер'
+  end
+
+  def human_sex
+    semnum? ? 'осенний семестер' : 'весенний семестр'
+  end
+
+end

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  chnum: 1
+  chname: MyString
+
+two:
+  chnum: 1
+  chname: MyString

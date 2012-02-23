@@ -1,0 +1,4 @@
+$gridColumns: 12;
+$gridColumnWidth: 60px;
+$gridGutterWidth: 20px;
+@import "bootstrap";

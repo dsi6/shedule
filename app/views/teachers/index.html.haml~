@@ -1,0 +1,26 @@
+%h1 Преподаватели
+
+%table
+  %tr
+    %th Имя
+    %th Отчество
+    %th Фамилия
+    %th Уч. степень
+    %th Логин
+    %th
+    %th
+    %th
+
+  - @teachers.each do |teacher|
+    %tr
+      %td= teacher.name
+      %td= teacher.sname
+      %td= teacher.last_name
+      %td= teacher.tlogin
+      %td= link_to 'Посмотреть', teacher
+      %td= link_to 'Редактировать', edit_teacher_path(teacher)
+      %td= link_to 'Удалить', teacher, :confirm => 'Are you sure?', :method => :delete
+
+%br
+.btn
+  = link_to 'Новый преподаватель', new_teacher_path

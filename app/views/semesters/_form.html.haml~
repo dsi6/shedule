@@ -1,0 +1,29 @@
+= form_for @semester do |f|
+  -if @semester.errors.any?
+    .msg.error
+      %h2= "при сохранении возникли ошибки:"
+      %ul
+        - @semester.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :year
+    = f.number_field :year, :size=>2
+  .field
+    = f.label :semnum
+    %br
+    = f.radio_button :semnum,"1",:checked=>@semester.semnum?
+    Осенний семестр
+    = f.radio_button :semnum,"0",:checked=>!@semester.semnum?
+    Весенний семестр
+  .field
+    = f.label :wcount
+    = f.number_field :wcount, :size=>1
+  .field
+    = f.label :stsem
+    = f.date_select :stsem, :start_year=>1990, :end_year=>Time.now.year
+  .field
+    = f.label :finsem
+    = f.date_select :finsem, :start_year=>1990, :end_year=>Time.now.year
+  .actions
+    = f.submit 'Сохранить'

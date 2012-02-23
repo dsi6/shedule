@@ -1,0 +1,33 @@
+= form_for @item do |f|
+  -if @item.errors.any?
+    .alert-message.block-message.error
+      %h2= "при сохранении возникли ошибки:"
+      %ul
+        - @item.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :flow_id
+    = f.select :flow_id,Flow.all.map{|c| [c.id] }
+  .field
+    = f.label :room_id
+    = f.select :room_id,Room.all.map{|c| [c.audience,c.id]}
+  .field
+    = f.label :itype
+    = f.number_field :itype
+  .field
+    = f.label :inum
+    = f.number_field :inum
+  .field
+    = f.label :wday
+    = f.number_field :wday
+  .field
+    = f.label :start_at
+    %br
+    = f.text_field :start_at
+  .field
+    = f.label :finish_at
+    %br
+    = f.text_field :finish_at
+  .actions
+    = f.submit 'Сохранить'

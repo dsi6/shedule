@@ -1,0 +1,10 @@
+%p
+  %b Группа:
+  = @flow.group_id
+%p
+  %b Описание:
+  = @flow.comment
+
+= link_to 'Редактировать', edit_flow_path(@flow)
+\|
+= link_to 'Назад', flows_path

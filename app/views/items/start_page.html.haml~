@@ -1,0 +1,35 @@
+%body
+  %div.container-fluid
+    %div.sidebar
+    
+    %div.content
+      .row
+        .btn.span2.offset2 
+          = link_to 'Группа', groups_path
+        .btn.span2.offset5
+          = link_to 'Факультет', faculties_path
+        %br
+      .row
+        .btn.span2.offset3
+          = link_to 'Семестр', semesters_path
+        .btn.span2.offset6
+          = link_to 'Преподаватели', teachers_path
+        %br
+      .row
+        .btn.span2.offset3
+          = link_to 'Кафедра', chairs_path
+        .btn.span2.offset6
+          = link_to 'Предмет', courses_path
+        %br
+      .row
+        .btn.span2.offset3
+          = link_to 'План', plans_path
+        .btn.span2.offset6
+          = link_to 'Аудитория', rooms_path
+        %br
+      .row
+        .btn.span2.offset3
+          = link_to 'Поток', flows_path
+        .btn.span2.offset6
+          = link_to 'Пара', items_path
+

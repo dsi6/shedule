@@ -1,0 +1,19 @@
+%p
+  %b Номер группы:
+  = @group.numb_gr
+%p
+  %b Вместимость:
+  = @group.gcount
+%p
+  %b Номер плана:
+  = @group.plan_id
+%p
+  %b Семестр:
+  = @group.semester_id
+%p
+  %b Факультет:
+  = @group.faculty_id
+
+= link_to 'Редактировать', edit_group_path(@group)
+\|
+= link_to 'Назад', groups_path

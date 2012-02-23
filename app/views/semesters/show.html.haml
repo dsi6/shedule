@@ -1,0 +1,22 @@
+%p
+  %b Год:
+  = @semester.year
+%p
+  %b Семестр:
+  -if @semester.semnum == false
+    весенний
+  -else
+    осенний
+%p
+  %b Кол-во недель:
+  = @semester.wcount
+%p
+  %b Нацало семестра:
+  = @semester.stsem
+%p
+  %b Конец семестра:
+  = @semester.finsem
+
+= link_to 'Редактировать', edit_semester_path(@semester)
+\|
+= link_to 'Назад', semesters_path

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  sname: MyString
+  plan_id: 1
+  fotch: 1
+  lab: 1
+  sem: 1
+  lect: 1
+  chair_id: 1
+
+two:
+  name: MyString
+  sname: MyString
+  plan_id: 1
+  fotch: 1
+  lab: 1
+  sem: 1
+  lect: 1
+  chair_id: 1

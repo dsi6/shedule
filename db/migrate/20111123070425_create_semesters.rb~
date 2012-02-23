@@ -1,0 +1,13 @@
+class CreateSemesters < ActiveRecord::Migration
+  def change
+    create_table :semesters do |t|
+      t.integer :year
+      t.boolean :semnum
+      t.integer :wcount
+      t.data :stsem
+      t.data :finsem
+
+      t.timestamps
+    end
+  end
+end

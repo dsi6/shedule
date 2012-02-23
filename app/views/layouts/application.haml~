@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title Расписание
+    = stylesheet_link_tag 'application', 'bootstrap.css.scss'
+    /[if lte IE 6]
+      =stylesheet_link_tag 
+    =javascript_include_tag :defaults, 'jquery.tokeninput', 'application', 'bootstrap'
+    = csrf_meta_tag
+  %body
+    #main
+      = render 'layouts/tray'
+      %hr
+      = render 'layouts/menu'
+      %hr.noscreen
+        #content.box
+          -unless notice.blank?
+            .msg.done=notice
+          -unless flash[:error].blank?
+            .msg.error=flash[:error]
+          = yield
+      %hr.noscreen
+      = render 'layouts/footer'

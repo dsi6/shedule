@@ -1,0 +1,16 @@
+%p
+  %b Ном. корп.:
+  = @room.rname
+%p
+  %b ном. ауд.:
+  = @room.audience
+%p
+  %b Вмест. ауд.:
+  = @room.rcount_aud
+%p
+  %b Вид ауд.:
+  = @room.comment
+
+= link_to 'Редактировать', edit_room_path(@room)
+\|
+= link_to 'Назад', rooms_path

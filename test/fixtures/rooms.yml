@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rname: MyString
+  audience: MyString
+  rcount_aud: 1
+  comment: MyString
+
+two:
+  rname: MyString
+  audience: MyString
+  rcount_aud: 1
+  comment: MyString

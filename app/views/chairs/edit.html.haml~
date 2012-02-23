@@ -1,0 +1,7 @@
+%h1 Editing chair
+
+= render 'form'
+
+= link_to 'Просмотр', @chair
+\|
+= link_to 'Назад', chairs_path

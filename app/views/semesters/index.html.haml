@@ -1,0 +1,29 @@
+%h1 Информация о семестре
+%table.bordered-table
+  %thead
+    %tr
+      %th Год
+      %th Семестер
+      %th Кол-во недель
+      %th Начало семестра
+      %th Конец семестра
+      %th
+      %th
+      %th
+  %tbody
+    - @semesters.each do |semester|
+      %tr
+        %td= semester.year
+        -if semester.semnum == false
+          %td весенний
+        -else
+          %td осенний
+        %td= semester.wcount
+        %td= semester.stsem
+        %td= semester.finsem
+        %td= link_to 'Посмотреть', semester
+        %td= link_to 'Редактировать', edit_semester_path(semester)
+        %td= link_to 'Удалить', semester, :confirm => 'Are you sure?', :method => :delete
+
+.actions
+  = link_to 'Новый семестр', new_semester_path, :class=>"btn primary"

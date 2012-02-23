@@ -1,0 +1,13 @@
+.well
+  %li{:id=>controller_name=='faculties' ? "menu-active" : nil}=link_to content_tag(:span,"Факультеты"),faculties_path
+  %li{:id=>controller_name=='rooms' ? "menu-active" : nil}=link_to content_tag(:span,"Аудитории"),rooms_path
+  %li{:id=>controller_name=='teachers' ? "menu-active" : nil}=link_to content_tag(:span,"Преподаватели"),teachers_path
+  %li{:id=>controller_name=='chairs' ? "menu-active" : nil}=link_to content_tag(:span,"Кафедры"),chairs_path
+  -if @current_user && @current_user.admin?
+    %li{:id=>controller_name=='groups' ? "menu-active" : nil}=link_to content_tag(:span,"Группа"),groups_path
+    %li{:id=>controller_name=='semesters' ? "menu-active" : nil}=link_to content_tag(:span,"Семестр"),semesters_path
+    %li{:id=>controller_name=='courses' ? "menu-active" : nil}=link_to content_tag(:span,"Предметы"),courses_path
+    %li{:id=>controller_name=='plans' ? "menu-active" : nil}=link_to content_tag(:span,"План"),plans_path
+    %li{:id=>controller_name=='flows' ? "menu-active" : nil}=link_to content_tag(:span,"Поток"),flows_path
+    %li{:id=>controller_name=='items' ? "menu-active" : nil}=link_to content_tag(:span,"Пары"),items_path
+  

@@ -1,0 +1,36 @@
+%h1 Предметы
+%table.bordered-table
+  %thead
+    %tr
+      %th Полн. назв.
+      %th Сокр. назв.
+      %th Ном. плана
+      %th Форм. отч.
+      %th Лаб. з.
+      %th Сем. з.
+      %th Лек. з.
+      %th Кафедра
+      %th Факультатив
+      %th Сам. работа
+      %th
+      %th
+      %th
+  %tbody
+    - @courses.each do |course|
+      %tr
+        %td= course.name
+        %td= course.sname
+        %td= course.plan_id
+        %td= course.fotch
+        %td= course.lab
+        %td= course.sem
+        %td= course.lect
+        %td= course.chair_id
+        %td= course.cfaculty
+        %td= course.mywork
+        %td= link_to 'Посмотреть', course
+        %td= link_to 'Редактировать', edit_course_path(course)
+        %td= link_to 'Удалить', course, :confirm => 'Are you sure?', :method => :delete
+
+.actions
+  = link_to 'Новый предмет', new_course_path, :class=>"btn primary"

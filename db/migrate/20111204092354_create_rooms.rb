@@ -1,0 +1,13 @@
+class CreateRooms < ActiveRecord::Migration
+  def change
+    create_table :rooms do |t|
+      t.string :rname
+      t.string :audience
+      t.integer :rcount_aud
+      t.string :comment
+      t.integer :settings
+
+      t.timestamps
+    end
+  end
+end

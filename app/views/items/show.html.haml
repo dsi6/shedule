@@ -1,0 +1,25 @@
+%p
+  %b Поток:
+  = @item.flow_id
+%p
+  %b Аудитория:
+  = @item.room_id
+%p
+  %b Тип:
+  = @item.itype
+%p
+  %b Кол. часов:
+  = @item.inum
+%p
+  %b Кол. нед.:
+  = @item.wday
+%p
+  %b Нач. предм.:
+  = @item.start_at
+%p
+  %b Конец. предм.:
+  = @item.finish_at
+
+= link_to 'Редактировать', edit_item_path(@item)
+\|
+= link_to 'Назад', items_path

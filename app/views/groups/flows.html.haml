@@ -1,0 +1,21 @@
+%h1 Потоки
+%table.bordered-table
+  %thead
+    %tr
+      %th Группа
+      %th Описание
+      %th
+      %th
+      %th
+  %tbody
+    - @flows.each do |flow|
+      %tr
+        %td= flow.group_id
+        %td= flow.comment
+        %td= link_to 'Посмотреть', flow
+        %td= link_to 'Редактировать', edit_flow_path(flow)
+        %td= link_to 'Удалить', flow, :confirm => 'Are you sure?', :method => :delete
+
+.actions
+  = link_to 'Новый поток', new_flow_group_path, :class=>"btn primary"
+  = link_to 'Пара', items_flow_path(@flow), :class=>"btn primary"

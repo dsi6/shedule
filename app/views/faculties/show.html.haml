@@ -1,0 +1,30 @@
+%p
+  %b Сокр. название:
+  = @faculty.short_name
+%p
+  %b Полн. название:
+  = @faculty.name
+-if !@faculty.groups.blank?
+  %table.bordered-table
+    %thead
+      %tr
+        %th Номер группы
+        %th Кол-во студ.
+        %th Номер плана
+        %th Семестер
+        %th
+        %th
+    %tbody
+      - @faculty.groups.each do |group|
+        %tr
+          %td= link_to group.numb_gr,edit_group_path(group)
+          %td= group.gcount
+          %td= group.plan_id
+          %td= group.semester_id
+          %td= link_to 'Посмотреть', group
+          %td= link_to 'Удалить', group, :confirm => 'Are you sure?', :method => :delete
+
+
+= link_to 'Редактировать', edit_faculty_path(@faculty)
+\|
+= link_to 'Назад', faculties_path

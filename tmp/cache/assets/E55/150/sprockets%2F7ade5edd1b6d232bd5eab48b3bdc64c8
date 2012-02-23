@@ -1,0 +1,592 @@
+o: ActiveSupport::Cache::Entry	:@value{"asset_paths["/$root/app/assets/stylesheets/main.css.scss"	body"[D/* =============================================================================
+
+	MAIN.CSS
+	version: 1.7
+	updated: 2009-03-14, 12:44 GMT+1
+
+============================================================================= */
+/* =============================================================================
+HTML - styles
+============================================================================= */
+/* line 14, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+body {
+  font: 0.8em/1.5 "arial", sans-serif;
+}
+
+/* line 15, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+h1, h2, h3, h4, h5, h6, address, blockquote, dl, fieldset, ol, p, table, ul {
+  margin: 15px 0;
+}
+
+/* line 16, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content h1 {
+  font-size: 180%;
+}
+
+/* line 17, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content h2 {
+  font-size: 160%;
+}
+
+/* line 18, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content h3 {
+  font-size: 140%;
+}
+
+/* line 19, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content h4 {
+  font-size: 120%;
+}
+
+/* line 20, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content h5, h6 {
+  font-size: 100%;
+}
+
+/* line 21, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content table {
+  margin: 0;
+  border-collapse: collapse;
+}
+
+/* line 22, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content table.width100 {
+  width: 100%;
+}
+
+/* line 23, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content table th, #content table td {
+  padding: 5px 5px;
+}
+
+/* line 24, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content table th {
+  text-align: left;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+/* line 25, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content ul {
+  margin: 15px 0;
+  list-style: none;
+}
+
+/* line 26, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content ul li {
+  padding-left: 15px;
+  background: url("/images/ul.gif") 0 4px no-repeat;
+}
+
+/* line 27, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content ul ul {
+  margin: 0 0 0 10px;
+}
+
+/* line 28, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content ul ul li {
+  padding-left: 15px;
+  background: url("/images/ul-ul.gif") 0 4px no-repeat;
+}
+
+/* line 29, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content ol {
+  margin: 15px 0 15px 30px;
+  list-style-type: decimal;
+}
+
+/* line 30, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content ol ol {
+  margin: 0 0 0 20px;
+}
+
+/* line 31, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content ol ol li {
+  list-style-type: lower-alpha;
+}
+
+/*#content dl {clear:both;}*/
+/* line 33, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content dl dt {
+  font-weight: bold;
+}
+
+/* line 34, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content dl dd {
+  margin: 0 0 5px 0;
+}
+
+/* line 35, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content fieldset {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* line 36, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content legend {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+/* line 37, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content code {
+  font-family: "",monospace;
+}
+
+/* line 38, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .help {
+  cursor: help;
+}
+
+/* =============================================================================
+HTML - without styles
+============================================================================= */
+/* line 44, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+table.nostyle, table.nostyle th, table.nostyle td {
+  border: 0 !important;
+}
+
+/* line 45, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+table.nostyle th {
+  background: none !important;
+  text-align: left !important;
+}
+
+/* line 46, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+table.nostyle th, table.nostyle td {
+  padding: 3px 5px !important;
+}
+
+/* line 47, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+ul.nostyle {
+  margin: 15px 0 15px 20px !important;
+  list-style-type: square !important;
+}
+
+/* line 48, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+ul.nostyle ul {
+  margin: 0 0 0 25px !important;
+  list-style-type: square !important;
+}
+
+/* line 49, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+ul.nostyle li {
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* line 50, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+dl.nostyle dt {
+  font-weight: bold !important;
+}
+
+/* line 51, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+dl.nostyle dd {
+  margin: 0 !important;
+}
+
+/* =============================================================================
+LAYOUT
+============================================================================= */
+/* line 57, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#main {
+  min-width: 980px;
+  width: expression(document.body.clientWidth < 980? "980px" : "auto" );
+}
+
+/* line 58, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#tray {
+  padding: 12px 15px;
+  background: url("/images/tray.gif") 0 0 repeat-x;
+  font: 85%/1.2 "tahoma", sans-serif;
+}
+
+/* line 59, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#tray p {
+  margin: 0;
+}
+
+/* line 60, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#tray p.f-left {
+  width: 50%;
+}
+
+/* line 61, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#tray #logout, #tray #login {
+  padding-left: 18px;
+  background: url("/images/tray-logout.gif") 0 50% no-repeat;
+  text-transform: uppercase;
+}
+
+/* line 62, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#tray #switcher {
+  margin-right: 15px;
+}
+
+/* line 63, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#tray #switcher img {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  border: 0;
+}
+
+/* line 64, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#menu {
+  padding: 15px 15px 13px 15px;
+  background: url("/images/menu.gif") 0 0 repeat-x;
+}
+
+/* line 65, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 66, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#menu ul li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 67, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#menu ul li a {
+  float: left;
+  margin-right: 5px;
+  padding-left: 5px;
+  background: url("/images/menu-left.gif") 0 0 no-repeat;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 68, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#menu ul li a span {
+  float: left;
+  display: block;
+  padding: 7px 15px 9px 8px;
+  background: url("/images/menu-right.gif") 100% 0 no-repeat;
+}
+
+/* line 69, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#menu ul li a:hover, #menu ul li#menu-active a {
+  background: url("/images/menu-left.gif") 0 -35px no-repeat;
+}
+
+/* line 70, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#menu ul li a:hover span, #menu ul li#menu-active a span {
+  background: url("/images/menu-right.gif") 100% -35px no-repeat;
+}
+
+/* line 71, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#menu ul li#menu-active a {
+  font-weight: bold;
+}
+
+/* line 72, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content {
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* line 73, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#footer {
+  clear: both;
+  padding: 15px;
+  background: url("/images/separator.gif") 0 0 repeat-x;
+  font: 85%/1.2 "tahoma", sans-serif;
+}
+
+/* line 74, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#footer p {
+  margin: 0;
+}
+
+/* =============================================================================
+/* =============================================================================
+OTHERS
+============================================================================= */
+/* line 81, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside .padding {
+  padding-left: 15px;
+}
+
+/* line 82, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #logo {
+  margin: 0 0 15px 0;
+}
+
+/* line 83, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #logo img {
+  display: block;
+  width: 200px;
+}
+
+/* line 84, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #search fieldset {
+  padding: 7px 10px;
+}
+
+/* line 85, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #search fieldset p {
+  margin: 0;
+}
+
+/* line 86, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #search fieldset legend {
+  font-weight: bold;
+}
+
+/* line 87, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #search fieldset .input-text {
+  width: 130px;
+}
+
+/* line 88, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #search fieldset #search-options {
+  margin-top: 10px;
+}
+
+/* line 89, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #btn-create {
+  margin: 0 0 15px 0;
+}
+
+/* line 90, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #btn-create a {
+  float: left;
+  padding-left: 27px;
+  height: 37px;
+  overflow: hidden;
+  background: url("/images/btn-create-left.gif") 0 0 no-repeat;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* line 91, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #btn-create a span {
+  float: left;
+  display: block;
+  width: 163px;
+  padding: 8px 0 10px 10px;
+  background: url("/images/btn-create-right.gif") -2px 0 no-repeat;
+}
+
+/* line 92, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside #btn-create a:hover {
+  background-position: 0 -37px;
+}
+
+/* line 93, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside ul {
+  width: 215px;
+  margin: 0 0 15px 0;
+  list-style: none;
+}
+
+/* line 94, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside ul li {
+  display: inline;
+}
+
+/* line 95, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside ul li a {
+  display: block;
+  width: 185px;
+  padding: 4px 15px;
+  text-decoration: none;
+}
+
+/* line 96, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside ul li#submenu-active a {
+  width: 198px;
+  border: 0;
+  background: url("/images/submenu-active.gif") 100% 50% no-repeat;
+  font-weight: bold;
+  z-index: 999;
+}
+
+/* line 97, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside ul ul {
+  margin: 0;
+  position: static;
+}
+
+/* line 98, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#aside ul ul li a, #aside ul li#submenu-active ul li a {
+  width: 170px;
+  padding: 5px 15px 5px 30px;
+  background: url("/images/submenu-sub.gif") 15px 7px no-repeat;
+  font: 85%/1.2 "tahoma", sans-serif;
+  font-weight: normal;
+}
+
+/* line 99, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content h1 {
+  margin: 0;
+  padding: 10px 15px;
+  background: url("/images/content-h1.gif") 0 0 repeat-x;
+  letter-spacing: -1px;
+}
+
+/* line 100, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .col50 {
+  float: left;
+  width: 49%;
+}
+
+/* line 101, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .col33 {
+  float: left;
+  width: 32%;
+}
+
+/* line 102, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .col33.center {
+  padding: 0 2%;
+}
+
+/* line 103, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs {
+  margin: 15px 0;
+}
+
+/* line 104, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 105, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs ul li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 106, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs a {
+  float: left;
+  margin-right: 3px;
+  padding-left: 4px;
+  background: url("/images/tabs-l.gif") 0 -100px no-repeat;
+  text-decoration: none;
+}
+
+/* line 107, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs a span {
+  float: left;
+  display: block;
+  padding: 8px 15px 6px 11px;
+  background: url("/images/tabs-r.gif") 100% -100px no-repeat;
+}
+
+/* line 108, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs a:hover, .tabs a:hover span {
+  text-decoration: underline;
+}
+
+/* line 109, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs .ui-tabs-selected a {
+  background: url("/images/tabs-l.gif") 0 0 no-repeat;
+  font-weight: bold;
+}
+
+/* line 110, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs .ui-tabs-selected a span {
+  background: url("/images/tabs-r.gif") 100% 0 no-repeat;
+}
+
+/* line 111, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .tabs .ui-tabs-selected a:hover, #content .tabs .ui-tabs-selected a:hover span {
+  text-decoration: none;
+}
+
+/* line 112, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+#content .ui-tabs-hide {
+  display: none !important;
+}
+
+/* line 113, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.input-text {
+  padding: 3px;
+  font: 100%/1.5 "arial", sans-serif;
+}
+
+/* line 114, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.input-text-02 {
+  padding: 5px;
+  font: 140%/1.5 "arial", sans-serif;
+}
+
+/* line 115, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.input-submit {
+  padding: 5px;
+  font-size: 120%;
+}
+
+/* line 116, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.input-submit-02 {
+  padding: 1px;
+  font-size: 100%;
+}
+
+/* line 117, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.msg {
+  padding: 10px;
+  padding-left: 35px;
+}
+
+/* line 118, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.msg.warning {
+  background: url("/images/ico-warning.gif") 10px 50% no-repeat;
+}
+
+/* line 119, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.msg.info {
+  background: url("/images/ico-info.gif") 10px 50% no-repeat;
+}
+
+/* line 120, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.msg.done {
+  background: url("/images/ico-done.gif") 10px 50% no-repeat;
+}
+
+/* line 121, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.msg.error {
+  background: url("/images/ico-delete.gif") 10px 50% no-repeat;
+}
+
+/* =============================================================================
+FONT STYLES
+============================================================================= */
+/* line 127, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.bigger {
+  font-size: 120%;
+}
+
+/* line 128, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.smaller {
+  font: 85%/1.2 "tahoma", sans-serif;
+}
+
+/* This line can be deleted */
+/* line 131, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.tit {
+  padding: 10px;
+  background: #f5f5f5;
+}
+
+/* line 131, /home/drof/Рабочий стол/shedule/app/assets/stylesheets/main.css.scss */
+.tag {
+  background: #ffa;
+}
+"content_type"text/css"
+class"BundledAsset"
+mtime"2011-12-04T15:27:09+03:00"_version"%46dde6621c301f4928e3b34efee9e3b5"id"%be011b4443a7bbd7fc2bf76792c65e9f"dependency_paths[{"hexdigest"%0da06c5d94108de95d08c96d911dd571"
+mtimeu:	Time���  �l"	path"/$root/app/assets/stylesheets/main.css.scss"pathname"/$root/app/assets/stylesheets/main.css.scss"logical_path"main.css:@expires_in0:@compressedF:@created_atf1323349858.181175 �_

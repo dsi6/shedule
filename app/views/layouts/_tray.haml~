@@ -1,0 +1,13 @@
+.fill
+  .container
+    =link_to "Расписание","items",:class=>"brand"
+    %ul.nav
+      %li=link_to "На главную","http://localhost:3000/"
+    %p.pull-right
+      -if @current_user
+        Вы:
+        %strong=@current_user.login
+        .btn=link_to "Выход",logout_path,:id=>"logout"
+      -else
+        .btn=link_to "Вход",login_path,:id=>"login",:class=>"btn"
+

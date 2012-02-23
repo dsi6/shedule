@@ -1,0 +1,25 @@
+%h1 Список аудиторий
+
+%table
+  %tr
+    %th Ном. корп.
+    %th Ном. ауд.
+    %th Вместимость
+    %th Вид. ауд.
+    %th
+    %th
+    %th
+
+  - @rooms.each do |room|
+    %tr
+      %td= room.rname
+      %td= room.audience
+      %td= room.rcount_aud
+      %td= room.comment
+      %td= link_to 'Посмотреть', room
+      %td= link_to 'Редактировать', edit_room_path(room)
+      %td= link_to 'Удалить', room, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'Новая аудитория', new_room_path

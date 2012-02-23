@@ -1,0 +1,25 @@
+%h1 Listing groups
+
+%table
+  %tr
+    %th Номер группы
+    %th Вместимость
+    %th Номер плана
+    %th Семестер
+    %th
+    %th
+    %th
+
+  - @groups.each do |group|
+    %tr
+      %td= group.numb_gr
+      %td= group.gcount
+      %td= group.plan_id
+      %td= group.semester_id
+      %td= link_to 'Посмотреть', group
+      %td= link_to 'Редактировать', edit_group_path(group)
+      %td= link_to 'Удалить', group, :confirm => 'Are you sure?', :method => :delete
+
+%br
+.btn_info
+  = link_to 'Новая группа', new_group_path

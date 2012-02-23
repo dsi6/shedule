@@ -1,0 +1,16 @@
+= form_for @chair do |f|
+  -if @chair.errors.any?
+    .alert-message
+      %h2= "при сохранении возникли ошибки:"
+      %ul
+        - @chair.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :chnum
+    = f.number_field :chnum
+  .field
+    = f.label :chname
+    = f.text_field :chname
+  .actions
+    = f.submit 'Сохранить'

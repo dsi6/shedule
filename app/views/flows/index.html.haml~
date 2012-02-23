@@ -1,0 +1,21 @@
+%h1 Потоки
+
+%table
+  %tr
+    %th Группа
+    %th Описание
+    %th
+    %th
+    %th
+
+  - @flows.each do |flow|
+    %tr
+      %td= flow.group_id
+      %td= flow.group_id
+      %td= link_to 'Посмотреть', flow
+      %td= link_to 'Редактировать', edit_flow_path(flow)
+      %td= link_to 'Удалить', flow, :confirm => 'Are you sure?', :method => :delete
+
+%br
+.btn
+  = link_to 'Новый поток', new_flow_path

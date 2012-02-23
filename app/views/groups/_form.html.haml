@@ -1,0 +1,25 @@
+= form_for @group do |f|
+  -if @group.errors.any?
+    .alert-message
+      %h2= "при сохранении возникли ошибки:"
+      %ul
+        - @group.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :numb_gr
+    = f.text_field :numb_gr, :size=>2
+  .field
+    = f.label :gcount
+    = f.number_field :gcount, :size=>1
+  .field
+    = f.label :plan_id
+    = f.select :plan_id, Plan.all.map{|c| [c.id,c.id]}
+  .field
+    = f.label :semester_id
+    = f.select :semester_id, Semester.all.map{|c| [c.stsem,c.id]}
+  .field
+    = f.label :faculty_id
+    = f.select :faculty_id, Faculty.all.map{|c| [c.name,c.id]}
+  .actions
+    = f.submit 'Сохранить', :class=>"btn"

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  flow_id: 1
+  room_id: 1
+  itype: 1
+  inum: 1
+  wday: 1
+  start_at: 2011-12-04
+  finish_at: 2011-12-04
+
+two:
+  flow_id: 1
+  room_id: 1
+  itype: 1
+  inum: 1
+  wday: 1
+  start_at: 2011-12-04
+  finish_at: 2011-12-04

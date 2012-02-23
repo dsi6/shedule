@@ -1,0 +1,29 @@
+%h1 Преподаватели
+%table.bordered-table
+  %thead
+    %tr
+      %th Имя
+      %th Отчество
+      %th Фамилия
+      %th Уч. степень
+      %th Логин
+      -if @current_user && @current_user.admin?
+        %th
+        %th
+        %th
+  %tbody
+    - @teachers.each do |teacher|
+      %tr
+        %td= teacher.name
+        %td= teacher.sname
+        %td= teacher.last_name
+        %td= teacher.scrank
+        %td= teacher.tlogin
+        -if @current_user && @current_user.admin?
+          %td= link_to 'Посмотреть', teacher
+          %td= link_to 'Редактировать', edit_teacher_path(teacher)
+          %td= link_to 'Удалить', teacher, :confirm => 'Are you sure?', :method => :delete
+
+-if @current_user && @current_user.admin?
+  .actions
+    = link_to 'Новый преподаватель', new_teacher_path, :class=>"btn primary"

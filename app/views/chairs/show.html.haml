@@ -1,0 +1,10 @@
+%p
+  %b Номер кафедры:
+  = @chair.chnum
+%p
+  %b Название кафедры:
+  = @chair.chname
+
+= link_to 'Редактировать', edit_chair_path(@chair)
+\|
+= link_to 'Назад', chairs_path

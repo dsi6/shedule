@@ -1,0 +1,8 @@
+class Group < ActiveRecord::Base
+has_many :semesters,
+
+validates :numb_gr,:presence => true,:uniqueness => true
+validates :gcount, :presence => true, :length=>{:minimum => 10, :maximum=>100}
+validates :plan_id, :presence => true
+validates :semester_id, :presence => true 
+end

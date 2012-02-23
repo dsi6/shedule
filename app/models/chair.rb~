@@ -1,0 +1,6 @@
+class Chair < ActiveRecord::Base
+has_many :teachers
+
+validates :chnum, :presence => true, :length=>{:minimum=>10, :maximum => 99}
+validates :chname, :presence => true
+end

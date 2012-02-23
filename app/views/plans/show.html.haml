@@ -1,0 +1,7 @@
+%p
+  %b Номер плана:
+  = @plan.id
+
+= link_to 'Редактировать', edit_plan_path(@plan)
+\|
+= link_to 'Назад', plans_path

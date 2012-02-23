@@ -1,0 +1,23 @@
+%h1 Кафедры
+%table.bordered-table
+  %thead
+    %tr
+      %th Номер кафедры
+      %th Название кафедры
+      -if @current_user && @current_user.admin?
+        %th
+        %th
+        %th
+  %tbody
+    - @chairs.each do |chair|
+      %tr
+        %td= chair.chnum
+        %td= chair.chname
+        -if @current_user && @current_user.admin?
+          %td= link_to 'Просмотр', chair
+          %td= link_to 'Редактировать', edit_chair_path(chair)
+          %td= link_to 'Удалить', chair, :confirm => 'Are you sure?', :method => :delete
+
+-if @current_user && @current_user.admin?
+  .actions
+    = link_to 'Создать кафедру', new_chair_path, :class=>"btn primary"

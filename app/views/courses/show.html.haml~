@@ -1,0 +1,35 @@
+%p
+  %b Полн. назв.:
+  = @course.name
+%p
+  %b Сокр. назв.:
+  = @course.sname
+%p
+  %b Ном. плана:
+  = @course.plan_id
+%p
+  %b Форм. отч.:
+  = @course.fotch
+%p
+  %b Лаб. з.:
+  = @course.lab
+%p
+  %b Сем. з.:
+  = @course.sem
+%p
+  %b Лек. з.:
+  = @course.lect
+%p
+  %b Кафедра:
+  = @course.chair_id
+%p
+  %b Факультатив:
+  = @course.cfaculty
+%p
+  %b Сам. работа:
+  = @course.chair_id
+
+
+= link_to 'Редактировать', edit_course_path(@course)
+\|
+= link_to 'Назад', courses_path

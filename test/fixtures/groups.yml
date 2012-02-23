@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  numb_gr: MyText
+  gcount: 1
+  plan_id: 1
+  semester_id: 1
+
+two:
+  numb_gr: MyText
+  gcount: 1
+  plan_id: 1
+  semester_id: 1

@@ -1,0 +1,26 @@
+.bordered-table
+  %table
+    %tr
+      %th Поток
+      %th Аудитория
+      %th Тип
+      %th Часы
+      %th Кол. недель
+      %th Нач. предм.
+      %th Нач. предм.
+      %th
+      %th
+      %th
+
+    - @items.each do |item|
+      %tr
+        %td= item.flow_id
+        %td= item.room_id
+        %td= item.itype
+        %td= item.inum
+        %td= item.wday
+        %td= item.start_at
+        %td= item.finish_at
+        %td= link_to 'Посмотреть', item
+        %td= link_to 'Редактировать', edit_item_path(item)
+        %td= link_to 'Удалить', item, :confirm => 'Are you sure?', :method => :delete

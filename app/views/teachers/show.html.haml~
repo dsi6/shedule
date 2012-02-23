@@ -1,0 +1,16 @@
+%p
+  %b Имя:
+  = @teacher.name
+%p
+  %b Отчество:
+  = @teacher.sname
+%p
+  %b Фамилия:
+  = @teacher.last_name
+%p
+  %b Логин:
+  = @teacher.tlogin
+
+= link_to 'Редактировать', edit_teacher_path(@teacher)
+\|
+= link_to 'Назад', teachers_path

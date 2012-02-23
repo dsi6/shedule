@@ -1,0 +1,14 @@
+.fill
+  .container
+    =link_to "Расписание","items",:class=>"brand"
+    %ul.navbar-text
+      %li=link_to "На главную",root_path
+    %p.pull-right
+      =@current_semester.year
+      -if @current_user
+        Вы:
+        %strong=@current_user.login           
+        =link_to "Выход",logout_path,:id=>"logout", :class=>"btn primary"
+      -else
+        =link_to "Вход",login_path,:id=>"login",:class=>"btn primary"
+

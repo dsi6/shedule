@@ -1,0 +1,23 @@
+%h1 Список факультетов
+%table.bordered-table
+  %thead
+    %tr
+      %th Сокр. название
+      %th Полн. название
+      -if @current_user && @current_user.admin?
+        %th
+        %th
+        %th
+  %tbody
+    - @faculties.each do |faculty|
+      %tr
+        %td=link_to faculty.short_name, faculty
+        %td= faculty.name
+        -if @current_user && @current_user.admin?
+          %td= link_to 'Посмотреть', faculty
+          %td= link_to 'Редактировать', edit_faculty_path(faculty)
+          %td= link_to 'Удалить', faculty, :confirm => 'Are you sure?', :method => :delete
+
+-if @current_user && @current_user.admin?
+  .actions
+    = link_to 'Новый факультет', new_faculty_path, :class=>"btn primary"

@@ -1,0 +1,3661 @@
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:14:02 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (41.8ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (8.1ms)
+Rendered layouts/_tray.haml (463.9ms)
+Rendered layouts/_menu.haml (87.2ms)
+Rendered layouts/_footer.haml (16.1ms)
+Completed 200 OK in 2543ms (Views: 2080.8ms | ActiveRecord: 47.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:14:08 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:14:09 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:14:09 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (8ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:14:09 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:09 +0300 2012
+Served asset /jquery.js - 304 Not Modified (150ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:09 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (173ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:10 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (131ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:10 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (127ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:10 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (154ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:10 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (107ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:11 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (95ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:11 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (51ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:11 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (62ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:11 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:11 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:14:11 +0300 2012
+Served asset /application.js - 304 Not Modified (55ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:14:11 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:14:11 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (13ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:16:36 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.6ms)
+Rendered layouts/_tray.haml (13.0ms)
+Completed 500 Internal Server Error in 884ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    4:     %ul.navbar-text
+    5:       %li=link_to "На главную",root_path
+    6:     %p, :class => "navbar-text pull-right"
+    7:       =@current_semester.year
+    8:       -if @current_user
+    9:         Вы:
+    10:         %strong=@current_user.login           
+  app/views/layouts/_tray.haml:7
+  app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:17:07 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (8.7ms)
+Completed 500 Internal Server Error in 789ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    4:     %ul.navbar-text
+    5:       %li=link_to "На главную",root_path
+    6:     %p, :class => "navbar-text"
+    7:       =@current_semester.year
+    8:       -if @current_user
+    9:         Вы:
+    10:         %strong=@current_user.login           
+  app/views/layouts/_tray.haml:7
+  app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:17:17 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (13.6ms)
+Completed 500 Internal Server Error in 805ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    4:     %ul.navbar-text
+    5:       %li=link_to "На главную",root_path
+    6:     %p, :class => "pull-right"
+    7:       =@current_semester.year
+    8:       -if @current_user
+    9:         Вы:
+    10:         %strong=@current_user.login           
+  app/views/layouts/_tray.haml:7
+  app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:17:35 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.6ms)
+Rendered layouts/_tray.haml (81.2ms)
+Rendered layouts/_menu.haml (26.0ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 687ms (Views: 455.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:17:36 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:17:37 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:17:37 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:37 +0300 2012
+Served asset /jquery.js - 304 Not Modified (102ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:17:37 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:37 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:37 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:37 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:37 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:17:38 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:18:47 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (300.0ms)
+Rendered layouts/_menu.haml (22.1ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 912ms (Views: 687.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:18:49 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:18:49 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:18:49 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:18:49 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:49 +0300 2012
+Served asset /jquery.js - 304 Not Modified (127ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:49 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:49 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:18:50 +0300 2012
+Served asset /application.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:18:51 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:18:51 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:19:45 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.1ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+ERROR: compiling _app_views_layouts__tray_haml__312931017__634124418 RAISED compile error
+/home/hp/shedule/app/views/layouts/_tray.haml:6: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...urrent_semester.year, :class=>"brand"
+                              ^
+Function body:           def _app_views_layouts__tray_haml__312931017__634124418(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/_tray";_old_output_buffer = @output_buffer;tray = local_assigns[:tray];;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:ugly=>false, :preserve=>["textarea", "pre", "code"], :escape_html=>true, :format=>:html5, :escape_attrs=>true, :encoding=>nil, :attr_wrapper=>"'", :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"]});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<div class='fill'>\n  <div class='container'>\n    #{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_false_false_true_false_true_false((link_to "Расписание","items",:class=>"brand"
+));}\n    <ul class='navbar-text'>\n      <li>#{_hamlout.adjust_tabs(2); 
+_hamlout.format_script_false_true_false_true_false_true_false((link_to "На главную",root_path
+));}</li>\n    </ul>\n    #{_hamlout.adjust_tabs(-1); _hamlout.format_script_false_false_false_true_false_true_false((@current_semester.year, :class=>"brand"
+));}\n    <p class='pull-right'>\n", 1, false);
+if @current_user
+_hamlout.push_text("      Вы:\n      <strong>#{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_true_false_true_false_true_false((@current_user.login
+));}</strong>\n      #{_hamlout.format_script_false_false_false_true_false_true_false((link_to "Выход",logout_path,:id=>"logout", :class=>"btn primary"
+));}\n", 0, false);else
+_hamlout.push_text("      #{_hamlout.format_script_false_false_false_true_false_true_false((link_to "Вход",login_path,:id=>"login",:class=>"btn primary"
+));}\n", 0, false);end
+_hamlout.push_text("    </p>\n  </div>\n</div>\n", -3, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/hp/shedule/app/views/layouts/_tray.haml:18:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:190:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:143:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:256:in `render_partial'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:228:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:227:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:219:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/helpers/rendering_helper.rb:27:in `render_without_haml'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers/action_view_mods.rb:11:in `render'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers.rb:90:in `non_haml'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers/action_view_mods.rb:11:in `render'
+/home/hp/shedule/app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:144:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:144:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:99:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:434:in `_run__54790035__process_action__928840463__callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:386:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:121:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal.rb:193:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal.rb:236
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/usr/lib/ruby/gems/1.8/gems/sass-3.1.15/lib/sass/../sass/plugin/rack.rb:54:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/etag.rb:23:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/conditionalget.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/session/abstract/id.rb:195:in `context'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/session/abstract/id.rb:190:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/query_cache.rb:62:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/sendfile.rb:101:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/lock.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/engine.rb:456:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/content_length.rb:16:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/handler/webrick.rb:59:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/server.rb:265:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands/server.rb:70:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:54
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:49:in `tap'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:49
+script/rails:6:in `require'
+script/rails:6
+Rendered layouts/_tray.haml (34.5ms)
+Completed 500 Internal Server Error in 868ms
+
+ActionView::Template::Error (compile error
+/home/hp/shedule/app/views/layouts/_tray.haml:6: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...urrent_semester.year, :class=>"brand"
+                              ^):
+    3:     =link_to "Расписание","items",:class=>"brand"
+    4:     %ul.navbar-text
+    5:       %li=link_to "На главную",root_path
+    6:     =@current_semester.year, :class=>"brand"
+    7:     %p.pull-right
+    8:       -if @current_user
+    9:         Вы:
+  app/views/layouts/_tray.haml:18:in `compile'
+  app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:20:07 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.6ms)
+Rendered layouts/_tray.haml (97.5ms)
+Rendered layouts/_menu.haml (28.2ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 930ms (Views: 706.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:20:09 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:20:09 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:20:09 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:20:09 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:09 +0300 2012
+Served asset /jquery.js - 304 Not Modified (124ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:09 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:09 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:20:10 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:20:11 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:21:01 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.6ms)
+ERROR: compiling _app_views_layouts__tray_haml__312931017__634271868 RAISED compile error
+/home/hp/shedule/app/views/layouts/_tray.haml:17: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_layouts__tray_haml__312931017__634271868(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/_tray";_old_output_buffer = @output_buffer;tray = local_assigns[:tray];;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:ugly=>false, :preserve=>["textarea", "pre", "code"], :escape_html=>true, :format=>:html5, :escape_attrs=>true, :encoding=>nil, :attr_wrapper=>"'", :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"]});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<div class='fill'>\n  <div class='container'>\n    #{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_false_false_true_false_true_false((link_to "Расписание","items",:class=>"brand"
+));}\n    <ul class='navbar-text'>\n      <li>#{_hamlout.adjust_tabs(2); 
+_hamlout.format_script_false_true_false_true_false_true_false((link_to "На главную",root_path
+));}</li>\n    </ul>\n", -1, false);a=@current_semester.year
+_hamlout.push_text("    Год a\n", 0, false);end
+_hamlout.push_text("    <p class='pull-right'>\n", 1, false);
+if @current_user
+_hamlout.push_text("      Вы:\n      <strong>#{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_true_false_true_false_true_false((@current_user.login
+));}</strong>\n      #{_hamlout.format_script_false_false_false_true_false_true_false((link_to "Выход",logout_path,:id=>"logout", :class=>"btn primary"
+));}\n", 0, false);else
+_hamlout.push_text("      #{_hamlout.format_script_false_false_false_true_false_true_false((link_to "Вход",login_path,:id=>"login",:class=>"btn primary"
+));}\n", 0, false);end
+_hamlout.push_text("    </p>\n  </div>\n</div>\n", -3, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/hp/shedule/app/views/layouts/_tray.haml:17:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:190:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:143:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:256:in `render_partial'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:228:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:227:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:219:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/helpers/rendering_helper.rb:27:in `render_without_haml'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers/action_view_mods.rb:11:in `render'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers.rb:90:in `non_haml'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers/action_view_mods.rb:11:in `render'
+/home/hp/shedule/app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:144:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:144:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:99:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:434:in `_run__54790035__process_action__928840463__callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:386:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:121:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal.rb:193:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal.rb:236
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/usr/lib/ruby/gems/1.8/gems/sass-3.1.15/lib/sass/../sass/plugin/rack.rb:54:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/etag.rb:23:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/conditionalget.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/session/abstract/id.rb:195:in `context'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/session/abstract/id.rb:190:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/query_cache.rb:62:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/sendfile.rb:101:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/lock.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/engine.rb:456:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/content_length.rb:16:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/handler/webrick.rb:59:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/server.rb:265:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands/server.rb:70:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:54
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:49:in `tap'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:49
+script/rails:6:in `require'
+script/rails:6
+Rendered layouts/_tray.haml (38.8ms)
+Completed 500 Internal Server Error in 867ms
+
+ActionView::Template::Error (compile error
+/home/hp/shedule/app/views/layouts/_tray.haml:17: syntax error, unexpected kENSURE, expecting $end):
+    14:         =link_to "Вход",login_path,:id=>"login",:class=>"btn primary"
+  app/views/layouts/_tray.haml:17:in `compile'
+  app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:21:12 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.6ms)
+ERROR: compiling _app_views_layouts__tray_haml__312931017__634057438 RAISED compile error
+/home/hp/shedule/app/views/layouts/_tray.haml:18: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_layouts__tray_haml__312931017__634057438(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/_tray";_old_output_buffer = @output_buffer;tray = local_assigns[:tray];;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:ugly=>false, :preserve=>["textarea", "pre", "code"], :escape_html=>true, :format=>:html5, :escape_attrs=>true, :encoding=>nil, :attr_wrapper=>"'", :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"]});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<div class='fill'>\n  <div class='container'>\n    #{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_false_false_true_false_true_false((link_to "Расписание","items",:class=>"brand"
+));}\n    <ul class='navbar-text'>\n      <li>#{_hamlout.adjust_tabs(2); 
+_hamlout.format_script_false_true_false_true_false_true_false((link_to "На главную",root_path
+));}</li>\n    </ul>\n", -1, false);a=@current_semester.year
+_hamlout.push_text("    Год\n    a\n", 0, false);end
+_hamlout.push_text("    <p class='pull-right'>\n", 1, false);
+
+if @current_user
+_hamlout.push_text("      Вы:\n      <strong>#{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_true_false_true_false_true_false((@current_user.login
+));}</strong>\n      #{_hamlout.format_script_false_false_false_true_false_true_false((link_to "Выход",logout_path,:id=>"logout", :class=>"btn primary"
+));}\n", 0, false);else
+_hamlout.push_text("      #{_hamlout.format_script_false_false_false_true_false_true_false((link_to "Вход",login_path,:id=>"login",:class=>"btn primary"
+));}\n", 0, false);end
+_hamlout.push_text("    </p>\n  </div>\n</div>\n", -3, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/hp/shedule/app/views/layouts/_tray.haml:18:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:190:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:143:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:256:in `render_partial'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:228:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:227:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:219:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/helpers/rendering_helper.rb:27:in `render_without_haml'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers/action_view_mods.rb:11:in `render'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers.rb:90:in `non_haml'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.4/lib/haml/helpers/action_view_mods.rb:11:in `render'
+/home/hp/shedule/app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:144:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:144:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:99:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:434:in `_run__54790035__process_action__928840463__callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:386:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:121:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal.rb:193:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_controller/metal.rb:236
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/usr/lib/ruby/gems/1.8/gems/sass-3.1.15/lib/sass/../sass/plugin/rack.rb:54:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/etag.rb:23:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/conditionalget.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/session/abstract/id.rb:195:in `context'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/session/abstract/id.rb:190:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/query_cache.rb:62:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/sendfile.rb:101:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/lock.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/engine.rb:456:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/content_length.rb:16:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/handler/webrick.rb:59:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.3.6/lib/rack/server.rb:265:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands/server.rb:70:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:54
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:49:in `tap'
+/usr/lib/ruby/gems/1.8/gems/railties-3.1.1/lib/rails/commands.rb:49
+script/rails:6:in `require'
+script/rails:6
+Rendered layouts/_tray.haml (35.9ms)
+Completed 500 Internal Server Error in 776ms
+
+ActionView::Template::Error (compile error
+/home/hp/shedule/app/views/layouts/_tray.haml:18: syntax error, unexpected kENSURE, expecting $end):
+    15:         =link_to "Вход",login_path,:id=>"login",:class=>"btn primary"
+  app/views/layouts/_tray.haml:18:in `compile'
+  app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:21:22 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (7.7ms)
+Completed 500 Internal Server Error in 576ms
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    5:       %li=link_to "На главную",root_path
+    6:     -a=@current_semester.year
+    7:       Год 
+    8:         a
+    9:     %p.pull-right
+    10:       -if @current_user
+    11:         Вы:
+  app/views/layouts/_tray.haml:8
+  app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:21:43 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (8.0ms)
+Completed 500 Internal Server Error in 595ms
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    5:       %li=link_to "На главную",root_path
+    6:     -@a=@current_semester.year
+    7:       Год 
+    8:         @a
+    9:     %p.pull-right
+    10:       -if @current_user
+    11:         Вы:
+  app/views/layouts/_tray.haml:8
+  app/views/layouts/application.haml:12:in `_app_views_layouts_application_haml___556984985__634737408'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:22:01 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (32.6ms)
+Rendered layouts/_menu.haml (25.7ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 730ms (Views: 491.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:03 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:03 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:22:03 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:03 +0300 2012
+Served asset /jquery.js - 304 Not Modified (129ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:03 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:03 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:03 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:04 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:04 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:04 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:04 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:04 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:04 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:04 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:04 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:05 +0300 2012
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:22:05 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:22:05 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:22:14 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (93.7ms)
+Rendered layouts/_menu.haml (25.2ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 768ms (Views: 524.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:16 +0300 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:16 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:22:16 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:16 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (41ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:16 +0300 2012
+Served asset /jquery.js - 304 Not Modified (183ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:16 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (359ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:17 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:17 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:17 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:17 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:17 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:17 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:18 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:18 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:18 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:18 +0300 2012
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:22:18 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:22:18 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:22:53 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (83.2ms)
+Rendered layouts/_menu.haml (25.4ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 699ms (Views: 466.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:55 +0300 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:55 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:22:55 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:22:55 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:55 +0300 2012
+Served asset /jquery.js - 304 Not Modified (120ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:55 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:55 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:22:56 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:22:57 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:23:11 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (93.3ms)
+Rendered layouts/_menu.haml (22.3ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 902ms (Views: 668.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:12 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:23:12 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:12 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:12 +0300 2012
+Served asset /jquery.js - 304 Not Modified (121ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:13 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:13 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:13 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:13 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:13 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:13 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:13 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:13 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:14 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:14 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:14 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:14 +0300 2012
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:23:14 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:23:14 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:23:28 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.1ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (98.4ms)
+Rendered layouts/_menu.haml (26.4ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 912ms (Views: 467.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:29 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:23:30 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:30 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:30 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:30 +0300 2012
+Served asset /jquery.js - 304 Not Modified (126ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:30 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:30 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:30 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:30 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /application.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:23:31 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:23:44 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (89.3ms)
+Rendered layouts/_menu.haml (29.3ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 923ms (Views: 463.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:45 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /jquery.js - 304 Not Modified (129ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:46 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:47 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:47 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:47 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:47 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:47 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:23:47 +0300 2012
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:23:47 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:23:47 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:24:09 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (95.4ms)
+Rendered layouts/_menu.haml (21.8ms)
+Rendered layouts/_footer.haml (5.2ms)
+Completed 200 OK in 716ms (Views: 465.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:24:10 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:24:10 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:24:10 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:24:10 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:11 +0300 2012
+Served asset /jquery.js - 304 Not Modified (117ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:11 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:11 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:11 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:11 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:11 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:11 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:11 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:12 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:12 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:12 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:24:12 +0300 2012
+Served asset /application.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:24:12 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:24:12 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:25:02 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.1ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (86.8ms)
+Rendered layouts/_menu.haml (25.5ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 687ms (Views: 443.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:04 +0300 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:04 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:25:04 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:04 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:04 +0300 2012
+Served asset /jquery.js - 304 Not Modified (117ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:04 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:04 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:04 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:05 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:05 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:05 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:05 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:05 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:05 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:05 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:05 +0300 2012
+Served asset /application.js - 304 Not Modified (214ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:25:06 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:25:06 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 22 12:25:19 +0300 2012
+  Processing by ItemsController#start_page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+Rendered items/start_page.html.haml within layouts/application (0.5ms)
+Rendered layouts/_tray.haml (143.8ms)
+Rendered layouts/_menu.haml (26.0ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 776ms (Views: 543.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:20 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:20 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:25:20 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:20 +0300 2012
+Served asset /jquery.js - 304 Not Modified (127ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:20 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:21 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:21 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:21 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (355ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:21 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:21 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:22 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:22 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:22 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:22 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:22 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (41ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:22 +0300 2012
+Served asset /application.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:25:22 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:25:22 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (1ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Wed Feb 22 12:25:30 +0300 2012
+  Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.7ms)[0m  [1mSELECT "groups".* FROM "groups" [0m
+  [1m[35mFaculty Load (0.8ms)[0m  SELECT "faculties".* FROM "faculties" WHERE "faculties"."id" IN (1)
+Rendered groups/index.html.haml within layouts/application (272.8ms)
+Rendered layouts/_tray.haml (57.1ms)
+Rendered layouts/_menu.haml (27.9ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 1156ms (Views: 702.9ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:32 +0300 2012
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:32 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:25:32 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:32 +0300 2012
+Served asset /jquery.js - 304 Not Modified (89ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:25:32 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:32 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:25:33 +0300 2012
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:25:34 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:25:34 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/semesters" for 127.0.0.1 at Wed Feb 22 12:26:07 +0300 2012
+  Processing by SemestersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSemester Load (0.7ms)[0m  [1mSELECT "semesters".* FROM "semesters" [0m
+Rendered semesters/index.html.haml within layouts/application (422.4ms)
+Rendered layouts/_tray.haml (6.7ms)
+Rendered layouts/_menu.haml (28.2ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 1106ms (Views: 836.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:26:09 +0300 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:26:09 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:26:09 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:26:09 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:09 +0300 2012
+Served asset /jquery.js - 304 Not Modified (139ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:09 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:10 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:11 +0300 2012
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:26:11 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:26:11 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (11ms)
+
+
+Started GET "/semesters/new" for 127.0.0.1 at Wed Feb 22 12:26:30 +0300 2012
+  Processing by SemestersController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.0ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered semesters/_form.html.haml (260.7ms)
+Rendered semesters/new.html.haml within layouts/application (532.1ms)
+Rendered layouts/_tray.haml (5.3ms)
+Rendered layouts/_menu.haml (27.4ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 1132ms (Views: 932.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:26:32 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:26:32 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:32 +0300 2012
+Served asset /jquery.js - 304 Not Modified (111ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:26:32 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (53ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:33 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:34 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:34 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:26:34 +0300 2012
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:26:34 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:26:34 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/semesters/new" for 127.0.0.1 at Wed Feb 22 12:29:53 +0300 2012
+  Processing by SemestersController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.0ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered semesters/_form.html.haml (147.6ms)
+Rendered semesters/new.html.haml within layouts/application (155.4ms)
+Compiled application.js  (69ms)  (pid 2507)
+Rendered layouts/_tray.haml (5.1ms)
+Rendered layouts/_menu.haml (26.3ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 1148ms (Views: 717.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:29:55 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:29:55 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:29:55 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:29:55 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:56 +0300 2012
+Served asset /jquery.js - 304 Not Modified (130ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:56 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:56 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:56 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:56 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:56 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:56 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:57 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:57 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:57 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:57 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:29:57 +0300 2012
+Served asset /application.js - 200 OK (20ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:29:57 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:29:57 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at Wed Feb 22 12:30:00 +0300 2012
+Served asset /images/ui-bg_highlight-soft_100_eeeeee_1x100.png - 200 OK (111ms)
+
+
+Started GET "/assets/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at Wed Feb 22 12:30:00 +0300 2012
+Served asset /images/ui-bg_gloss-wave_35_f6a828_500x100.png - 200 OK (159ms)
+
+
+Started GET "/assets/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at Wed Feb 22 12:30:00 +0300 2012
+Served asset /images/ui-icons_ffffff_256x240.png - 200 OK (68ms)
+
+
+Started GET "/assets/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at Wed Feb 22 12:30:01 +0300 2012
+Served asset /images/ui-bg_glass_100_f6f6f6_1x400.png - 200 OK (81ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" for 127.0.0.1 at Wed Feb 22 12:30:01 +0300 2012
+Served asset /images/ui-bg_highlight-soft_75_ffe45c_1x100.png - 200 OK (64ms)
+
+
+Started GET "/assets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at Wed Feb 22 12:30:01 +0300 2012
+Served asset /images/ui-bg_glass_100_fdf5ce_1x400.png - 200 OK (83ms)
+
+
+Started GET "/assets/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at Wed Feb 22 12:30:29 +0300 2012
+Served asset /images/ui-icons_ef8c08_256x240.png - 200 OK (37ms)
+
+
+Started GET "/semesters/new" for 127.0.0.1 at Wed Feb 22 12:32:48 +0300 2012
+  Processing by SemestersController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (0.9ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered semesters/_form.html.haml (80.1ms)
+Rendered semesters/new.html.haml within layouts/application (86.7ms)
+Compiled jquery-ui-1.8.16.custom.min  (223ms)  (pid 2507)
+Rendered layouts/_tray.haml (5.2ms)
+Rendered layouts/_menu.haml (27.4ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 942ms (Views: 749.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:32:50 +0300 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:32:50 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:32:50 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:32:50 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:50 +0300 2012
+Served asset /jquery.js - 304 Not Modified (138ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:50 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:50 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:50 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:32:51 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:32:52 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 200 OK (13ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at Wed Feb 22 12:32:54 +0300 2012
+Served asset /images/ui-bg_highlight-soft_100_eeeeee_1x100.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at Wed Feb 22 12:32:54 +0300 2012
+Served asset /images/ui-bg_gloss-wave_35_f6a828_500x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at Wed Feb 22 12:32:54 +0300 2012
+Served asset /images/ui-icons_ffffff_256x240.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at Wed Feb 22 12:32:54 +0300 2012
+Served asset /images/ui-bg_glass_100_f6f6f6_1x400.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" for 127.0.0.1 at Wed Feb 22 12:32:54 +0300 2012
+Served asset /images/ui-bg_highlight-soft_75_ffe45c_1x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at Wed Feb 22 12:32:54 +0300 2012
+Served asset /images/ui-bg_glass_100_fdf5ce_1x400.png - 304 Not Modified (9ms)
+
+
+Started GET "/assets/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at Wed Feb 22 12:33:04 +0300 2012
+Served asset /images/ui-icons_ef8c08_256x240.png - 304 Not Modified (0ms)
+
+
+Started GET "/items" for 127.0.0.1 at Wed Feb 22 12:36:01 +0300 2012
+  Processing by ItemsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.0ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.8ms)[0m  SELECT "items".* FROM "items" 
+Rendered items/index.html.haml within layouts/application (147.1ms)
+Rendered layouts/_tray.haml (60.6ms)
+Rendered layouts/_menu.haml (25.5ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 840ms (Views: 574.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:03 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:03 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:36:03 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:03 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /jquery.js - 304 Not Modified (83ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:04 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:05 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:05 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:05 +0300 2012
+Served asset /application.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:36:05 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:36:05 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (7ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at Wed Feb 22 12:36:08 +0300 2012
+  Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFlow Load (0.7ms)[0m  [1mSELECT "flows".* FROM "flows" [0m
+  [1m[35mRoom Load (7.8ms)[0m  SELECT "rooms".* FROM "rooms" 
+Rendered items/_form.html.haml (646.8ms)
+Rendered items/new.html.haml within layouts/application (661.0ms)
+Rendered layouts/_tray.haml (55.3ms)
+Rendered layouts/_menu.haml (27.0ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 1478ms (Views: 1143.5ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:11 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:11 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:36:11 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:11 +0300 2012
+Served asset /jquery.js - 304 Not Modified (95ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:11 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:11 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:11 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:11 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:36:12 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/semesters" for 127.0.0.1 at Wed Feb 22 12:36:29 +0300 2012
+  Processing by SemestersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSemester Load (0.7ms)[0m  [1mSELECT "semesters".* FROM "semesters" [0m
+Rendered semesters/index.html.haml within layouts/application (208.1ms)
+Rendered layouts/_tray.haml (10.0ms)
+Rendered layouts/_menu.haml (21.7ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 1122ms (Views: 846.8ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:31 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:31 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:36:31 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:31 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:32 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:32 +0300 2012
+Served asset /jquery.js - 304 Not Modified (80ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:32 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:32 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:32 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:32 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:32 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:32 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:33 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:33 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:33 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:33 +0300 2012
+Served asset /application.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:36:33 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:36:33 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/semesters/new" for 127.0.0.1 at Wed Feb 22 12:36:35 +0300 2012
+  Processing by SemestersController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.0ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered semesters/_form.html.haml (84.8ms)
+Rendered semesters/new.html.haml within layouts/application (92.4ms)
+Rendered layouts/_tray.haml (5.1ms)
+Rendered layouts/_menu.haml (28.7ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 702ms (Views: 480.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:36 +0300 2012
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /jquery.js - 304 Not Modified (107ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:37 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:38 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:38 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:38 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:38 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:38 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:36:38 +0300 2012
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:36:38 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:36:38 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (21ms)
+
+
+Started GET "/semesters/new" for 127.0.0.1 at Wed Feb 22 12:37:37 +0300 2012
+  Processing by SemestersController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.1ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered semesters/_form.html.haml (197.9ms)
+Rendered semesters/new.html.haml within layouts/application (210.1ms)
+Rendered layouts/_tray.haml (9.9ms)
+Rendered layouts/_menu.haml (22.0ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 910ms (Views: 695.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:37:39 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:37:39 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:37:39 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (8ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:37:39 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:40 +0300 2012
+Served asset /jquery.js - 304 Not Modified (254ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:40 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:40 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:40 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:40 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:40 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:41 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:41 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:41 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:41 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:41 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:37:41 +0300 2012
+Served asset /application.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:37:41 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:37:41 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at Wed Feb 22 12:37:47 +0300 2012
+Served asset /images/ui-bg_highlight-soft_100_eeeeee_1x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at Wed Feb 22 12:37:47 +0300 2012
+Served asset /images/ui-bg_gloss-wave_35_f6a828_500x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at Wed Feb 22 12:37:47 +0300 2012
+Served asset /images/ui-icons_ffffff_256x240.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at Wed Feb 22 12:37:47 +0300 2012
+Served asset /images/ui-bg_glass_100_f6f6f6_1x400.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" for 127.0.0.1 at Wed Feb 22 12:37:47 +0300 2012
+Served asset /images/ui-bg_highlight-soft_75_ffe45c_1x100.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at Wed Feb 22 12:37:47 +0300 2012
+Served asset /images/ui-bg_glass_100_fdf5ce_1x400.png - 304 Not Modified (0ms)
+
+
+Started GET "/semesters" for 127.0.0.1 at Wed Feb 22 12:38:18 +0300 2012
+  Processing by SemestersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.0ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSemester Load (0.8ms)[0m  SELECT "semesters".* FROM "semesters" 
+Rendered semesters/index.html.haml within layouts/application (84.6ms)
+Rendered layouts/_tray.haml (4.7ms)
+Rendered layouts/_menu.haml (26.2ms)
+Rendered layouts/_footer.haml (0.7ms)
+Completed 200 OK in 722ms (Views: 522.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (9ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /jquery.js - 304 Not Modified (115ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:20 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:38:21 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Wed Feb 22 12:38:41 +0300 2012
+  Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.7ms)[0m  [1mSELECT "groups".* FROM "groups" [0m
+  [1m[35mFaculty Load (0.8ms)[0m  SELECT "faculties".* FROM "faculties" WHERE "faculties"."id" IN (1)
+Rendered groups/index.html.haml within layouts/application (15.2ms)
+Rendered layouts/_tray.haml (59.6ms)
+Rendered layouts/_menu.haml (21.5ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 1198ms (Views: 577.6ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /jquery.js - 304 Not Modified (97ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:43 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:44 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:44 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:44 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:44 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:44 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:45 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:45 +0300 2012
+Served asset /application.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:38:45 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:38:45 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/faculties" for 127.0.0.1 at Wed Feb 22 12:38:47 +0300 2012
+  Processing by FacultiesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.1ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFaculty Load (0.7ms)[0m  [1mSELECT "faculties".* FROM "faculties" [0m
+Rendered faculties/index.html.haml within layouts/application (125.6ms)
+Rendered layouts/_tray.haml (60.5ms)
+Rendered layouts/_menu.haml (27.3ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 849ms (Views: 585.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:49 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:49 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:49 +0300 2012
+Served asset /jquery.js - 304 Not Modified (119ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:38:49 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:38:49 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:49 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:50 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:38:51 +0300 2012
+Served asset /application.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:38:51 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:38:51 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (17ms)
+
+
+Started GET "/faculties/1" for 127.0.0.1 at Wed Feb 22 12:38:58 +0300 2012
+  Processing by FacultiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (0.9ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFaculty Load (5.7ms)[0m  SELECT "faculties".* FROM "faculties" WHERE "faculties"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mGroup Load (0.9ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."faculty_id" IN (1)[0m
+Rendered faculties/show.html.haml within layouts/application (81.0ms)
+Rendered layouts/_tray.haml (71.7ms)
+Rendered layouts/_menu.haml (27.7ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 1256ms (Views: 536.3ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:00 +0300 2012
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:00 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:00 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:39:00 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:00 +0300 2012
+Served asset /jquery.js - 304 Not Modified (116ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:00 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:01 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:01 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:01 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:01 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:01 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:01 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:01 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:01 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:02 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:02 +0300 2012
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:39:02 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:39:02 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/groups/3/edit" for 127.0.0.1 at Wed Feb 22 12:39:05 +0300 2012
+  Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.0ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (1.1ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered groups/edit.html.haml within layouts/application (123.5ms)
+Rendered layouts/_tray.haml (62.3ms)
+Rendered layouts/_menu.haml (26.7ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 1040ms (Views: 556.1ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:06 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:06 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:06 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /jquery.js - 304 Not Modified (101ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:07 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:08 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:08 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:08 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:08 +0300 2012
+Served asset /application.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:39:08 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:39:08 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (4ms)
+
+
+Started GET "/groups/3/flows" for 127.0.0.1 at Wed Feb 22 12:39:13 +0300 2012
+  Processing by GroupsController#flows as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFlow Load (0.8ms)[0m  [1mSELECT "flows".* FROM "flows" WHERE "flows"."group_id" = 3[0m
+Rendered groups/flows.html.haml within layouts/application (58.3ms)
+Rendered layouts/_tray.haml (59.4ms)
+Rendered layouts/_menu.haml (25.5ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 857ms (Views: 479.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:15 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:15 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:15 +0300 2012
+Served asset /jquery.js - 304 Not Modified (116ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:15 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:39:15 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:16 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:17 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:17 +0300 2012
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:39:17 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:39:17 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (7ms)
+
+
+Started GET "/flows/3/items" for 127.0.0.1 at Wed Feb 22 12:39:20 +0300 2012
+  Processing by FlowsController#items as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.0ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.9ms)[0m  SELECT "items".* FROM "items" WHERE "items"."flow_id" IN (SELECT "flows"."id" FROM "flows" WHERE "flows"."group_id" = 3)
+Rendered flows/items.html.haml within layouts/application (64.7ms)
+Rendered layouts/_tray.haml (54.4ms)
+Rendered layouts/_menu.haml (26.8ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 892ms (Views: 570.2ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:22 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:39:22 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:22 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:22 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:22 +0300 2012
+Served asset /jquery.js - 304 Not Modified (113ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:23 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (42ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:23 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:23 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:23 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:23 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:23 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:23 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:23 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:24 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:24 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:24 +0300 2012
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:39:24 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:39:24 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (1ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Wed Feb 22 12:39:35 +0300 2012
+  Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.7ms)[0m  [1mSELECT "groups".* FROM "groups" [0m
+  [1m[35mFaculty Load (0.7ms)[0m  SELECT "faculties".* FROM "faculties" WHERE "faculties"."id" IN (1)
+Rendered groups/index.html.haml within layouts/application (19.2ms)
+Rendered layouts/_tray.haml (63.7ms)
+Rendered layouts/_menu.haml (28.0ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 1111ms (Views: 719.0ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:37 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:37 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:37 +0300 2012
+Served asset /jquery.js - 304 Not Modified (82ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:39:37 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:39:37 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:38 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:38 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:38 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:38 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:38 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:38 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:38 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:39 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:39 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:39 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:39:39 +0300 2012
+Served asset /application.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:39:39 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:39:39 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/semesters" for 127.0.0.1 at Wed Feb 22 12:40:11 +0300 2012
+  Processing by SemestersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSemester Load (0.7ms)[0m  [1mSELECT "semesters".* FROM "semesters" [0m
+Rendered semesters/index.html.haml within layouts/application (79.9ms)
+Rendered layouts/_tray.haml (249.5ms)
+Rendered layouts/_menu.haml (28.2ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 925ms (Views: 734.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:40:12 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:40:12 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:40:12 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (9ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:40:13 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:13 +0300 2012
+Served asset /jquery.js - 304 Not Modified (99ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:13 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:13 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:13 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:13 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:13 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:13 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:14 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:14 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:14 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:14 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:14 +0300 2012
+Served asset /application.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:40:14 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:40:14 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Wed Feb 22 12:40:17 +0300 2012
+  Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.0ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.7ms)[0m  SELECT "groups".* FROM "groups" 
+  [1m[36mFaculty Load (0.9ms)[0m  [1mSELECT "faculties".* FROM "faculties" WHERE "faculties"."id" IN (1)[0m
+Rendered groups/index.html.haml within layouts/application (20.1ms)
+Rendered layouts/_tray.haml (84.0ms)
+Rendered layouts/_menu.haml (41.3ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 1111ms (Views: 489.2ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:40:18 +0300 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:40:18 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:40:18 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:19 +0300 2012
+Served asset /jquery.js - 304 Not Modified (107ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:40:19 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:19 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:19 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:19 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:19 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:19 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:20 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:20 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:20 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:20 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:20 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:40:20 +0300 2012
+Served asset /application.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:40:20 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:40:20 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (13ms)
+
+
+Started GET "/semesters" for 127.0.0.1 at Wed Feb 22 12:48:11 +0300 2012
+  Processing by SemestersController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSemester Load (1.1ms)[0m  [1mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSemester Load (0.9ms)[0m  SELECT "semesters".* FROM "semesters" 
+Rendered semesters/index.html.haml within layouts/application (93.3ms)
+Rendered layouts/_tray.haml (5.3ms)
+Rendered layouts/_menu.haml (28.8ms)
+Rendered layouts/_footer.haml (0.6ms)
+Completed 200 OK in 896ms (Views: 469.3ms | ActiveRecord: 64.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:48:12 +0300 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:48:12 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:48:12 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (11ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:48:13 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:13 +0300 2012
+Served asset /jquery.js - 304 Not Modified (197ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:13 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:13 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:13 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:13 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /application.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:48:14 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Wed Feb 22 12:48:18 +0300 2012
+  Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSemester Load (1.0ms)[0m  SELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.7ms)[0m  [1mSELECT "groups".* FROM "groups" [0m
+  [1m[35mFaculty Load (0.8ms)[0m  SELECT "faculties".* FROM "faculties" WHERE "faculties"."id" IN (1)
+Rendered groups/index.html.haml within layouts/application (15.6ms)
+Rendered layouts/_tray.haml (59.7ms)
+Rendered layouts/_menu.haml (22.1ms)
+Rendered layouts/_footer.haml (0.5ms)
+Completed 200 OK in 1107ms (Views: 456.7ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Feb 22 12:48:20 +0300 2012
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Wed Feb 22 12:48:20 +0300 2012
+Served asset /bootstrap.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/token-input-facebook.css?body=1" for 127.0.0.1 at Wed Feb 22 12:48:20 +0300 2012
+Served asset /token-input-facebook.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom?body=1" for 127.0.0.1 at Wed Feb 22 12:48:20 +0300 2012
+Served asset /jquery-ui-1.8.16.custom - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:20 +0300 2012
+Served asset /jquery.js - 304 Not Modified (106ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:20 +0300 2012
+Served asset /jquery_ujs.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:20 +0300 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-buttons.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /bootstrap-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-tabs.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /bootstrap-tabs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /bootstrap-twipsy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /bootstrap-alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Feb 22 12:48:21 +0300 2012
+Served asset /application.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/jquery.tokeninput?body=1" for 127.0.0.1 at Wed Feb 22 12:48:22 +0300 2012
+Served asset /jquery.tokeninput - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min?body=1" for 127.0.0.1 at Wed Feb 22 12:48:22 +0300 2012
+Served asset /jquery-ui-1.8.16.custom.min - 304 Not Modified (0ms)
